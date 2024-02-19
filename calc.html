@@ -1,0 +1,79 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+.b {
+  background-color: black;
+  color: red;
+  text-align: center;
+  font-size: 25px;
+}
+.t {
+  font-size: 25px;
+}
+.h {
+  background-color: green;
+  color: yellow;
+}
+.p {
+  background-color: silver;
+}
+</style>
+<script>
+function ac() {
+  document.getElementById("res").value = "";
+}
+function show(input) {
+  document.getElementById("res").value += input;
+}
+function del() {
+  var value = document.getElementById("res").value;
+  document.getElementById("res").value = value.slice(0, -1);
+}
+function cal() {
+  var output = eval(document.getElementById("res").value);
+  document.getElementById("res").value = output;
+}
+</script>
+</head>
+<body style="background-color: pink">
+<table style="background-color: grey" align="center" border="1" cellspacing="10" cellpadding="10">
+<caption align="center"><h1 class="h">CALCULATOR</h1></caption>
+<tr>
+<td colspan="3" align="center" bgcolor="black"><input type="text" class="t" id="res"></td>
+<td><button class="p" onclick="del()">Del</button></td>
+</tr>
+
+<tr>
+<td><button class="p" onclick="show('1')">1</button></td>
+<td><button class="p" onclick="show('2')">2</button></td>
+<td><button class="p" onclick="show('3')">3</button></td>
+<td><button class="p" onclick="show('+')">+</button></td>
+</tr>
+
+<tr>
+<td><button class="p" onclick="show('4')">4</button></td>
+<td><button class="p" onclick="show('5')">5</button></td>
+<td><button class="p" onclick="show('6')">6</button></td>
+<td><button class="p" onclick="show('-')">-</button></td>
+</tr>
+
+<tr>
+<td><button class="p" onclick="show('7')">7</button></td>
+<td><button class="p" onclick="show('8')">8</button></td>
+<td><button class="p" onclick="show('9')">9</button></td>
+<td><button class="p" onclick="show('*')">*</button></td>
+</tr>
+
+<tr>
+<td><button class="p" onclick="show('0')">0</button></td>
+<td><button class="p" onclick="show('/')">/</button></td>
+<td><button class="p" onclick="ac()">AC</button></td>
+<td><button class="p" onclick="cal()">=</button></td>
+</tr>
+   
+</table>
+</body>
+</html>
